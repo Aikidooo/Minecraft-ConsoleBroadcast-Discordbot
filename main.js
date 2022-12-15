@@ -31,7 +31,17 @@ Client.on("ready", async () => {
         let logs = fs.readFileSync("../screenlog.0");
         
         if(first) {
-            channel.send(logs.toString());
+            let message = logs.toString();
+            if(message.length > 3900) {
+                console.log("Message exceeds limit, chunking it...");
+                let chunkSize = 3500;
+                for(let i = 0; i < message.length; i += chunkSize) {
+                    channel.send(message.substring(i, i + chunkSize));
+                }
+            } else {
+                channel.send(message);
+            }
+
             lastLines = logs.toString().split("\n");
             first = false;
             return;
@@ -43,7 +53,16 @@ Client.on("ready", async () => {
         let newLastLine = lines.length;
         if(oldLastLine != newLastLine) {
             let linesToPrint = lines.slice(oldLastLine);
-            channel.send(linesToPrint.join("\n"));
+            let message = linesToPrint.join("\n");
+            if(message.length > 3900) {
+                console.log("Message exceeds limit, chunking it...");
+                let chunkSize = 3500;
+                for(let i = 0; i < message.length; i += chunkSize) {
+                    channel.send(message.substring(i, i + chunkSize));
+                }
+            } else {
+                channel.send(message);
+            }
         }
         lastLines = lines;
 
