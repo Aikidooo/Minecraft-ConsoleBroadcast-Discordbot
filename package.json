@@ -1,0 +1,19 @@
+{
+  "name": "consolebroadcastbot",
+  "version": "1.0.0",
+  "description": "Console broadcaster for discord Servers",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aikidooo/Minecraft-ConsoleBroadcast-Discordbot.git"
+  },
+  "author": "Aikidoo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aikidooo/Minecraft-ConsoleBroadcast-Discordbot/issues"
+  },
+  "homepage": "https://github.com/Aikidooo/Minecraft-ConsoleBroadcast-Discordbot#readme"
+}
