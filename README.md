@@ -5,11 +5,11 @@ Clone the repository and create a config.json in the directory.
 
 Write 
 > {
-    
+>  
 >   "token": "yourToken",
-
+>
 >   "channel": "yourChannelId"
-
+>
 > }
 to it.
 
