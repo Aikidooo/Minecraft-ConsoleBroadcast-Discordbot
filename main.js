@@ -28,11 +28,11 @@ Client.on("ready", async () => {
             await Sleep(20000);
             return;
         }
-        let logs = fs.readFileSync("screenlog.0");
+        let logs = fs.readFileSync("../screenlog.0");
         
         if(first) {
             channel.send(logs.toString());
-            lastLines = lines;
+            lastLines = logs.toString().split("\n");
             first = false;
             return;
         }
@@ -48,6 +48,7 @@ Client.on("ready", async () => {
         lastLines = lines;
 
     }, 300); //500ms update interval
+
 
     process.on("exit", () => {
         console.log("Stopping the bot...");
