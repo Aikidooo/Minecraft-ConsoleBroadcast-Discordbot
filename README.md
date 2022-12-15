@@ -4,10 +4,10 @@ A Discord bot which will broadcast your Minecraft serverconsole to a discord ser
 Clone the repository and create a config.json in the directory.
 
 Write 
-> {
->   "token": "yourToken",
->   "channel": "yourChannelId"
-> }
+> {\n
+>   "token": "yourToken",\n
+>   "channel": "yourChannelId"\n
+> }\n
 to it.
 
 Start your minecraft server via `screen -L -S sessionName` where -S is for the session's name and -L for enabling logs.
