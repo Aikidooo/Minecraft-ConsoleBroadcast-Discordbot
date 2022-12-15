@@ -32,9 +32,9 @@ Client.on("ready", async () => {
         
         if(first) {
             let message = logs.toString();
-            if(message.length > 3900) {
+            if(message.length > 1990) {
                 console.log("Message exceeds limit, chunking it...");
-                let chunkSize = 3500;
+                let chunkSize = 1500;
                 for(let i = 0; i < message.length; i += chunkSize) {
                     channel.send(message.substring(i, i + chunkSize));
                 }
@@ -54,9 +54,9 @@ Client.on("ready", async () => {
         if(oldLastLine != newLastLine) {
             let linesToPrint = lines.slice(oldLastLine);
             let message = linesToPrint.join("\n");
-            if(message.length > 3900) {
+            if(message.length > 1990) {
                 console.log("Message exceeds limit, chunking it...");
-                let chunkSize = 3500;
+                let chunkSize = 1500;
                 for(let i = 0; i < message.length; i += chunkSize) {
                     channel.send(message.substring(i, i + chunkSize));
                 }
