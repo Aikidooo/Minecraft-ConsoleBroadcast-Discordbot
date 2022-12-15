@@ -11,11 +11,12 @@ Write
 >   "channel": "yourChannelId"
 >
 > }
+
 to it.
 
 Start your minecraft server via `screen -L -S sessionName` where -S is for the session's name and -L for enabling logs.
 
-In the new Session start your Server and detatch from that screen via `Ctrl+a d`
+In the new Session start your Server and detatch from that screen via `Ctrl+a and d`
 
 Now there should be a `screenlog.0`-file, if the extension is something else than 0, just rename it.
 
