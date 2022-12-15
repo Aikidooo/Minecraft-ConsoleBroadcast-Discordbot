@@ -23,7 +23,7 @@ Client.on("ready", async () => {
     let lastLines = [];
 
     setInterval(async () => {
-        if(!fs.existsSync("screenlog.0")) {
+        if(!fs.existsSync("../screenlog.0")) {
             console.log("Couldn't find a logfile, please add/rename one to screenlog.0");
             await Sleep(20000);
             return;

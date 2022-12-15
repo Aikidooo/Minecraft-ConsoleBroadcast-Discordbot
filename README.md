@@ -1,7 +1,7 @@
 # Minecraft-ConsoleBroadcast-Discordbot
 A Discord bot which will broadcast your Minecraft serverconsole to a discord server
 ## Usage
-Clone the repository and create a config.json in the directory.
+Clone the repository to a Folder in your Minecraft server files and create a config.json in the directory.
 
 Write 
 > {
@@ -20,6 +20,6 @@ In the new Session start your Server and detatch from that screen via `Ctrl+a an
 
 Now there should be a `screenlog.0`-file, if the extension is something else than 0, just rename it.
 
-Start the script with node, `node main.js`, if you don't have Node installed, get it from [here](https://nodejs.org/en/).
+Start the script in the seperate folder with node, `node main.js`, if you don't have Node installed, get it from [here](https://nodejs.org/en/).
 
 The bot should now start sending the contents of `screenlog.0` into the specified channel.
