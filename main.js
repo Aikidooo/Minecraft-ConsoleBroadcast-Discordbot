@@ -29,26 +29,25 @@ Client.on("ready", async () => {
             return;
         }
         let logs = fs.readFileSync("screenlog.0");
-        let lines = logs.toString().split("\n");
-        if(lines.length < 2) return;
+        
         if(first) {
-            lines.forEach((line) => {
-                if(!line) return;
-                channel.send(line)
-            });
+            channel.send(logs.toString());
             lastLines = lines;
             first = false;
             return;
         }
+        let lines = logs.toString().split("\n");
+        if(lines.length < 2) return;
+
         let oldLastLine = lastLines.length;
         let newLastLine = lines.length;
         if(oldLastLine != newLastLine) {
             let linesToPrint = lines.slice(oldLastLine);
-            linesToPrint.forEach((line) => channel.send(line));
+            channel.send(linesToPrint.join("\n"));
         }
         lastLines = lines;
 
-    }, 500); //500ms update interval
+    }, 300); //500ms update interval
 
     process.on("exit", () => {
         console.log("Stopping the bot...");
