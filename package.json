@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Aikidooo/Minecraft-ConsoleBroadcast-Discordbot/issues"
   },
-  "homepage": "https://github.com/Aikidooo/Minecraft-ConsoleBroadcast-Discordbot#readme"
+  "homepage": "https://github.com/Aikidooo/Minecraft-ConsoleBroadcast-Discordbot#readme",
+  "dependencies": {
+    "discord.js": "^14.7.1"
+  }
 }
